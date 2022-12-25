@@ -6,8 +6,9 @@ RUN apk --update add \
     linux-headers \
     build-base \
     libffi-dev \
-    bash
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+    bash \
+    rust \
+    cargo
 COPY ./ /app
 WORKDIR /app
 RUN pip install -r requirements.txt
