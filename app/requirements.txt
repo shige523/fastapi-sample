@@ -10,4 +10,4 @@ starlette==0.14.2
 typing-extensions==3.10.0.0
 uvicorn==0.15.0
 cryptography==38.0.4
-Rust==1.48.0
+Rust==0.1.1
