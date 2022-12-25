@@ -6,11 +6,8 @@ RUN apk --update add \
     linux-headers \
     build-base \
     libffi-dev \
-    bash \
-    rust \
-    cargo
+    bash
 COPY ./ /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-RUN pip install cryptography
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
