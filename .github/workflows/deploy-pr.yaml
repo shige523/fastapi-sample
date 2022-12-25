@@ -1,4 +1,4 @@
-name: deploy-or
+name: deploy-pr
 
 on:
   pull_request:
@@ -46,10 +46,10 @@ jobs:
     needs: build-and-push-image
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout shige0523/kubernetes-basics
+      - name: Checkout shige523/kubernetes-basics
         uses: actions/checkout@v2
         with:
-          repository: shige0523/kubernetes-basics
+          repository: shige523/kubernetes-basics
           ref: v2.0-rc
       - name: update manifest file
         env:
