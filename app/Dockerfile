@@ -6,7 +6,9 @@ RUN apk --update add \
     linux-headers \
     build-base \
     libffi-dev \
-    bash
+    bash \
+    rust \
+    cargo
 COPY ./ /app
 WORKDIR /app
 RUN pip install -r requirements.txt
